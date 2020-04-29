@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    overflow: hidden;
+
+}
+@font-face {
+    font-family: 'futuraheavy';
+    src: url('futura_heavy_regular-webfont.woff2') format('woff2'),
+         url('futura_heavy_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.background{
+    height: 100%;
+ 	width: 100%;
+ 	background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(banner.jpg);
+ 	background-position: center;
+ 	background-size: cover;
+     position: absolute;
+     overflow: hidden;
+}
+.sidebar{
+    position:fixed;
+    left:-240px;
+    width:240px;
+    height: 100%;
+	background-color: rgba(94, 175, 223, 0.562); 
+    transition:all .5s ease;
+    overflow: hidden;
+    
+}
+.sidebar header{
+    color:white;
+    font-size: 28px;
+    line-height: 70px;
+    text-align: center;
+    background-color: rgba(94, 176, 223, 0.822); 
+
+    font-family:'source_sans_proregular', Helvetica;
+
+}
+.sidebar i{
+    align-content: center;
+}
+.select-ref-type{
+    position: absolute;
+    top:150%;
+    left:32%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(50%);
+    -ms-transform:translateY(-50%);
+    transform: translateY(-50%);
+    background: transparent;
+    pointer-events: none;
+    margin:0 auto;
+
+}
+.select-ref-type form{
+    width: 500px;
+    height: 400px;
+    background: rgba(94, 175, 223, 1);
+    border-radius: 30px;
+
+}
+.sidebar a{
+    vertical-align: middle;
+    display: block;
+    color: white;
+    height: 50px;
+    position: relative;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 30px;
+    border-bottom:2px solid rgba(153, 213, 253, 0.178);
+    background-color: solid transparent rgba(34, 107, 243, 0.651);
+    border-left: 5px solid transparent;
+    box-sizing: border-box;
+    font-family:'source_sans_proregular',sans-serif;
+    
+}
+.material-icons{
+    position: relative;
+    padding-right: 10px;
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+.plus-btn{
+    position: absolute;
+    margin:0;
+    top:50%;
+    left:46%;
+    outline: none;
+    -ms-transform: translateX(-50%);
+    transform: translateX(50%);
+    -ms-transform:translateY(-50%);
+    transform: translateY(-50%);
+    background-color: transparent;
+    border:transparent;
+    color:rgba(94, 175, 223, 0.562);
+    cursor: pointer;
+    transition:all .5 ease;
+
+}
+
+.plus-btn:hover{
+    color:rgba(94, 176, 223, 0.822);
+}
+
+.sidebar a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: small;
+
+}
+a:hover,a.active{
+    border-left: 5px solid white;
+    background: rgba(94, 176, 223, 0.822); 
+
+}
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+	background-color: rgba(94, 175, 223, 0.562); 
+    height: 45px;
+    width: 40px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 29px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin:15px 15px;
+    transition:all .5s ease;
+    
+}
+
+label #cancel{
+    opacity:0;
+    visibility: hidden;
+}
+#check:checked~label #btn{
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked~label #cancel{
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+}
+#check:checked ~.sidebar{
+    left:0;
+}

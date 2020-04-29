@@ -1,0 +1,53 @@
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>RAPA Home</title>   
+    
+    <link rel="stylesheet" href="styleIndex.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function scroll_up(element,pos){
+            var elem=document.getElementById(element);
+            elem.style.transition="all .5s ease";
+            elem.style.top=pos;
+            var pls=document.getElementById("pls-btn-id");
+            pls.style.translate(10,10);
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="background">
+    <input type="checkbox" id="check">
+    <label for="check"> 
+        <i class="material-icons" id="btn">reorder</i>
+        <i class="material-icons" id="cancel">highlight_off</i>
+    </label>
+    
+        <div class="sidebar">
+            <header>RAPA</header>
+            <a href="#"><i class="material-icons" style="font-size:15px;">dashboard</i><span>Inicio</span></a>
+            <a href="#"><i class="material-icons" style="font-size:15px">folder</i><span>Proyectos</span></a>
+            <a href="#"><i class="material-icons" style="font-size:15px">class</i><span>Referencias</span></a>
+            <a href="#"><i class="material-icons" style="font-size:15px">help_outline</i><span>Ayuda</span></a>
+            <a href="#"><i class="material-icons" style="font-size:15px">exit_to_app</i><span>Salir</span></a>   
+        </div>
+        <div class="plus-div" onclick="scroll_up('select-ref-type-form','50%');">
+            <button class="plus-btn" id="pls-btn-id">
+                <i class="fa fa-plus-circle" style="font-size:80px;"></i>
+            </button>
+        </div>
+       
+    </div>
+
+    <div class="select-ref-type" id="select-ref-type-form"  >
+        <form></form>
+    </div>
+      
+   
+</body>
+</html>
