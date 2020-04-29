@@ -48,7 +48,7 @@
 
 	background-color: rgba(94, 175, 223, 0.562); 
  }
- 
+
  .toggle-btn{
  	padding: 10px 30px;
  	cursor: pointer;
@@ -84,6 +84,7 @@
  	width: 280px;
 	 transition:.5s;
 	 font-family:'source_sans_proregular',sans-serif;
+	 
 
  }
  .input-field{
@@ -107,16 +108,15 @@
 
 .submit-btn{
  	width:85%;
- 	padding:10px 30px;
+ 	padding:10px 20px;
  	cursor: pointer;
- 	margin: auto;
  	background:linear-gradient(to right, rgb(255, 255, 255),#DEF8FF);
- 	border:0;
+	border:0;
  	outline:none;
  	border-radius:30px;
-	 position:center;
-	 font-family:'source_sans_proregular',sans-serif;
-
+	position: relative;
+	left:10%;
+	font-family:'source_sans_proregular',sans-serif;
  }
 
  .chech-box{

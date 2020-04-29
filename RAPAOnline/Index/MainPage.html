@@ -11,16 +11,29 @@
     <script>
         function scroll_up(element,pos){
             var elem=document.getElementById(element);
-            elem.style.transition="all .5s ease";
-            elem.style.top=pos;
             var pls=document.getElementById("pls-btn-id");
-            pls.style.translate(10,10);
+            pls.style.transition="all .5s ease";
+            elem.style.transition="all .5s ease";
+           if(pls.style.top=="5%"){
+            pls.style.top="42%";
+            pls.style.transform="rotate(0deg)";
+            elem.style.top="150%";
+           }else{
+            pls.style.transform="rotate(45deg)";
+            pls.style.top="5%";
+            elem.style.top=pos;
+           }
+         
+
+
         }
 
     </script>
 
 </head>
 <body>
+    
+   
     <div class="background">
     <input type="checkbox" id="check">
     <label for="check"> 
@@ -36,17 +49,26 @@
             <a href="#"><i class="material-icons" style="font-size:15px">help_outline</i><span>Ayuda</span></a>
             <a href="#"><i class="material-icons" style="font-size:15px">exit_to_app</i><span>Salir</span></a>   
         </div>
-        <div class="plus-div" onclick="scroll_up('select-ref-type-form','50%');">
-            <button class="plus-btn" id="pls-btn-id">
-                <i class="fa fa-plus-circle" style="font-size:80px;"></i>
-            </button>
+        <div class="select-ref-type" id="select-ref-type-form">
+            <form class="input-form">
+                <button type="submit" class="type-btn" id="revista-btn" onclick="display_revista();"> Revista </button>
+                <button type="submit" class="type-btn"> Periódico </button>
+                <button type="submit" class="type-btn"> Libro </button>
+                <button type="submit" class="type-btn"> Enciclopedia </button>
+                <button type="submit" class="type-btn"> Referencia Web </button>
+                
+    
+            </form>
         </div>
+      
        
     </div>
-
-    <div class="select-ref-type" id="select-ref-type-form"  >
-        <form></form>
+    <div class="plus-div" id="pls-btn-id" onclick="scroll_up('select-ref-type-form','20%');">
+        <button class="plus-btn" >
+            <i class="fa fa-plus-circle" style="font-size:80px;"></i>
+        </button>
     </div>
+
       
    
 </body>

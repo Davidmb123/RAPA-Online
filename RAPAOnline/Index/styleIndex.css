@@ -6,6 +6,7 @@
     text-decoration: none;
     overflow: hidden;
 
+
 }
 @font-face {
     font-family: 'futuraheavy';
@@ -39,8 +40,7 @@
     height: 100%;
 	background-color: rgba(94, 175, 223, 0.562); 
     transition:all .5s ease;
-    overflow: hidden;
-    
+    z-index: 1;
 }
 .sidebar header{
     color:white;
@@ -56,25 +56,17 @@
     align-content: center;
 }
 .select-ref-type{
-    position: absolute;
+    position: relative;
+    width: 300px;
+    height: 400px;    
     top:150%;
-    left:32%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(50%);
-    -ms-transform:translateY(-50%);
-    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
     background: transparent;
-    pointer-events: none;
-    margin:0 auto;
+    z-index: 0;
 
 }
-.select-ref-type form{
-    width: 500px;
-    height: 400px;
-    background: rgba(94, 175, 223, 1);
-    border-radius: 30px;
 
-}
 .sidebar a{
     vertical-align: middle;
     display: block;
@@ -95,27 +87,63 @@
     position: relative;
     padding-right: 10px;
     vertical-align: middle;
-    padding-bottom: 3px;
+    padding-bottom: 0px;
+}
+.input-form{
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    background: rgba(94, 176, 223, 0.527);
+    border-radius: 30px;
+    margin:0 auto;
+
 }
 
-.plus-btn{
-    position: absolute;
-    margin:0;
-    top:50%;
-    left:46%;
+.type-btn{
+    padding:10px 20px;
+    width:200px;
+    margin-top:30px;
+    border-radius:30px;
+    border:none;
     outline: none;
-    -ms-transform: translateX(-50%);
-    transform: translateX(50%);
-    -ms-transform:translateY(-50%);
-    transform: translateY(-50%);
+    background:white;
+    cursor: pointer;
+    font-family:'source_sans_proregular',sans-serif;
+
+
+}
+#revista-btn{
+    margin-top:40px;
+    cursor:pointer;
+
+}
+.plus-div{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top:42%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
+}
+.plus-btn{
+    outline: none;
     background-color: transparent;
     border:transparent;
     color:rgba(94, 175, 223, 0.562);
     cursor: pointer;
     transition:all .5 ease;
-
+    margin-left: auto;
+    margin-right: auto;
 }
-
+#btn{
+    padding-right: 0;
+}
+#cancel{
+    padding-right: 0;
+}
 .plus-btn:hover{
     color:rgba(94, 176, 223, 0.822);
 }
@@ -140,14 +168,12 @@ label #btn, label #cancel{
     cursor: pointer;
 	background-color: rgba(94, 175, 223, 0.562); 
     height: 45px;
-    width: 40px;
+    width: 45px;
     text-align: center;
     line-height: 45px;
     color: white;
     font-size: 29px;
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
+    border-radius: 5px;
     margin:15px 15px;
     transition:all .5s ease;
     
