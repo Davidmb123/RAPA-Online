@@ -33,6 +33,22 @@
      position: absolute;
      overflow: hidden;
 }
+
+.submit-btn{
+    width:100px;
+    padding:10px 20px;
+    cursor: pointer;
+    display:block;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    background:linear-gradient(to right, rgb(255, 255, 255),#DEF8FF);
+   border:0;
+    outline:none;
+    border-radius:30px;
+   position: relative;
+   font-family:'source_sans_proregular',sans-serif;
+}
 .sidebar{
     position:fixed;
     left:-240px;
@@ -119,7 +135,7 @@
 .input{
     text-align: center; 
     width: 500px;
-    height: 435px;
+    height: 500px;
     left:60%;
     position: fixed;
     background: rgba(94, 176, 223, 0.527);
@@ -135,17 +151,21 @@
     width: 300px;
     height: 400px;
     position: fixed;
-    left:39%;
+    left:40%;
     background: rgba(94, 176, 223, 0.527);
     border-radius: 30px;
     transition:all .5s ease;
     display:inline-block;
 }
+#ref-web-form{
+    height: 450px;
+
+}
 #ref-book-form{
     
     text-align: center; 
     width: 500px;
-    height: 435px;
+    height: 500px;
     left:60%;
     position: fixed;
     background: rgba(94, 176, 223, 0.527);
@@ -159,7 +179,7 @@
 }
 #ref-en-form{
     width: 550px;
-    height: 350px;
+    height: 400px;
     padding: 12px 20px;
     margin: 8px 0;
 
