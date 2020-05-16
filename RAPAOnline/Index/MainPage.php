@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <title>RAPA Home</title>   
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script defer src="modalScript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         var shownForm="ref-type-form";
@@ -107,9 +107,9 @@
 
 </head>
 <body>
-    
    
     <div class="background">
+      
         <input type="checkbox" id="check">
         <label for="check"> 
         <i class="material-icons" id="btn">reorder</i>
@@ -119,8 +119,8 @@
         <div class="sidebar">
             <header>RAPA</header>
             <div class="sidebar-buttons"  onclick=reload()><i class="material-icons" style="font-size:15px;" >dashboard</i><span>Inicio</span></div>
-            <div class="sidebar-buttons"><i class="material-icons" style="font-size:15px">folder</i><span>Proyectos</span></div>
-            <div class="sidebar-buttons"><i class="material-icons" style="font-size:15px">class</i><span>Referencias</span></div>
+            <div data-modal-target="#lista-proyectosid"class="sidebar-buttons"><i class="material-icons" style="font-size:15px">folder</i><span>Proyectos</span></div>
+            <div data-modal-target="#lista-referenciasid" class="sidebar-buttons"><i class="material-icons" style="font-size:15px">class</i><span>Referencias</span></div>
             <div class="sidebar-buttons"><i class="material-icons" style="font-size:15px">help_outline</i><span>Ayuda</span></div>
             <div class="sidebar-buttons" onclick=logOut()><i class="material-icons" style="font-size:15px">exit_to_app</i><span>Salir</span></div>   
         </div>
@@ -136,13 +136,12 @@
                 <input type="text" class="input-field-rev" placeholder="Autor" required>
 			    <input type="text" class="input-field-rev" placeholder="Título de la revista" required>
 			    <input type="text" class="input-field-rev" placeholder="Título del artículo" required>
-                <input type="text" class="input-field-rev" placeholder="Nombre de Revista" required>
                 <input type="number" class="input-field-rev" placeholder="De la página" required>
                 <input type="number" class="input-field-rev" placeholder="A la página" required>
 			    <input type="number" class="input-field-rev" placeholder="Volumen" required>
 			    <input type="text" class="input-field-rev" placeholder="Edición" required>
                 <input type="date" class="input-field-rev" placeholder="Recuperado" required>
-                <button type="submit" class="submit-btn"> Registro </button>
+                <button type="submit" class="submit-btn"> Crear </button>
 
 
             </form>
@@ -156,7 +155,7 @@
                 <input type="number" class="input-field-en" placeholder="A la página" required>
                 <input type="text" class="input-field-en" placeholder="Lugar de Publicación" required>
                 <input type="number" class="input-field-en" placeholder="Editorial" required>
-                <button type="submit" class="submit-btn"> Registro </button>
+                <button type="submit" class="submit-btn"> Crear </button>
 
             </form>
             <form class="input" id="ref-l-form">
@@ -167,7 +166,7 @@
                 <input type="text" class="input-field" placeholder="Editorial" required>
 			    <input type="text" class="input-field" placeholder="Lugar de Publicación" required>
                 <input type="number" class="input-field" placeholder="Año de publicación" required>
-                <button type="submit" class="submit-btn"> Registro </button>
+                <button type="submit" class="submit-btn"> Crear </button>
 
             </form>
             <form class="input" id="ref-p-form">
@@ -178,7 +177,7 @@
                 <input type="number" class="input-field" placeholder="De la página" required>
                 <input type="number" class="input-field" placeholder="A la página" required>
                 <input type="date"  class="input-field" placeholder="Recuperado" required>
-                <button type="submit" class="submit-btn"> Registro </button>
+                <button type="submit" class="submit-btn"> Crear </button>
 
             </form>
             <form class="input" id="ref-web-form">
@@ -187,30 +186,75 @@
                 <input type="url" class="input-field" placeholder="URL" required>
 			    <input type="text" class="input-field" placeholder="Fecha de publicacion" required>
                 <input type="date" class="input-field" placeholder="Recuperado" required>
-                <button type="submit" class="submit-btn"> Registro </button>
+                <button type="submit" class="submit-btn"> Crear </button>
 
             </form>
            
         </div>
-      
+        
+        <div class="plus-div">
+            <button class="plus-btn"id="pls-btn-id" onclick="scroll_up('input-forms-id','20%');">
+                <i id="idBtn" class="fa fa-plus-circle" style="font-size:80px;" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+       
+        
+    </div>
+    <div id="overlay"></div>
+
+    <div class="lista" id="lista-referenciasid">
+    
         <div class="lista-referencias">
-            <div clasS="div-title">
-            <h1>Lista de referencias</h1>
-                
+            <div class="lista-header">
+                <div class="title">
+                    <h2>Lista de Referencias</h2>
+                </div>
+                <button data-close-button class="close-button">&times;</button>
             </div>
-        <ul>
+            <div class="referencias">
+                <ul>
+                    <li>Esta es una referencia</li>
+                   
+            
 
 
-        </ul>
-    </div>
-    </div>
-    
-    <div class="plus-div"  >
-        <button class="plus-btn"id="pls-btn-id" onclick="scroll_up('input-forms-id','20%');">
-            <i id="idBtn" class="fa fa-plus-circle" style="font-size:80px;" aria-hidden="true"></i>
-        </button>
+                </ul>
+
+            </div>
+        
+        </div>
     </div>
     
+    <div class="lista" id="lista-proyectosid">
+    
+        <div class="lista-proyectos">
+            <div class="lista-header">
+                <div class="title">
+                    <h2>Lista de Proyectos</h2>
+                </div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="referencias">
+                <ul>
+                    <li>Esta es una referencia</li>
+                   
+            
+
+
+                </ul>
+
+            </div>
+        
+        </div>
+    </div>
+
+        
+
+
+  
+  
+
       
    
 </body>
