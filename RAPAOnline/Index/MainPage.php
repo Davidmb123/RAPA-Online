@@ -1,4 +1,5 @@
-<html lang="es" dir="ltr">
+
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <title>RAPA Home</title>   
@@ -109,11 +110,11 @@
     
    
     <div class="background">
-    <input type="checkbox" id="check">
-    <label for="check"> 
+        <input type="checkbox" id="check">
+        <label for="check"> 
         <i class="material-icons" id="btn">reorder</i>
         <i class="material-icons" id="cancel">highlight_off</i>
-    </label>
+        </label>
     
         <div class="sidebar">
             <header>RAPA</header>
@@ -136,8 +137,8 @@
 			    <input type="text" class="input-field-rev" placeholder="Título de la revista" required>
 			    <input type="text" class="input-field-rev" placeholder="Título del artículo" required>
                 <input type="text" class="input-field-rev" placeholder="Nombre de Revista" required>
-                <input type="number" class="input-field-rev" placeholder="De la pagina" required>
-                <input type="number" class="input-field-rev" placeholder="A la pagina" required>
+                <input type="number" class="input-field-rev" placeholder="De la página" required>
+                <input type="number" class="input-field-rev" placeholder="A la página" required>
 			    <input type="number" class="input-field-rev" placeholder="Volumen" required>
 			    <input type="text" class="input-field-rev" placeholder="Edición" required>
                 <input type="date" class="input-field-rev" placeholder="Recuperado" required>
@@ -161,7 +162,7 @@
             <form class="input" id="ref-l-form">
                 <input type="text" class="input-field" placeholder="Autor" required>
 			    <input type="text" class="input-field" placeholder="Título" required>
-                <input type="text" class="input-field" placeholder="Edicion" required>
+                <input type="text" class="input-field" placeholder="Edición" required>
                 <input type="number" class="input-field" placeholder="Volumen" required>
                 <input type="text" class="input-field" placeholder="Editorial" required>
 			    <input type="text" class="input-field" placeholder="Lugar de Publicación" required>
@@ -192,14 +193,24 @@
            
         </div>
       
-       
+        <div class="lista-referencias">
+            <div clasS="div-title">
+            <h1>Lista de referencias</h1>
+                
+            </div>
+        <ul>
+
+
+        </ul>
     </div>
+    </div>
+    
     <div class="plus-div"  >
         <button class="plus-btn"id="pls-btn-id" onclick="scroll_up('input-forms-id','20%');">
             <i id="idBtn" class="fa fa-plus-circle" style="font-size:80px;" aria-hidden="true"></i>
         </button>
     </div>
-
+    
       
    
 </body>
