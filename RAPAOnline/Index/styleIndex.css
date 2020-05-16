@@ -146,6 +146,31 @@
     opacity: 0;
     transition:all .5s ease;
 }
+#ref-l-form{
+    height: 550px;
+    
+}
+#ref-rev-form{
+    width: 550px;
+    height: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;    
+}
+.input-field-rev{
+    padding:10px 20px;
+    width:200px;
+    margin-top:30px;
+    border-radius:30px;
+    border:none;
+    outline: none;
+    background:white;
+    font-family:'source_sans_proregular',sans-serif;
+
+}
+#ref-p-form{
+    height: 550px;
+
+}
 #ref-type-form{
     text-align: center; 
     width: 300px;
@@ -159,6 +184,7 @@
 }
 #ref-web-form{
     height: 450px;
+    
 
 }
 #ref-book-form{
